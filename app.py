@@ -12,7 +12,7 @@ from resources.store import Store, StoreList
 PORT = os.environ.get('PORT', 5000)
 
 app = Flask(__name__, template_folder='../template')
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:////{os.path.join(os.path.dirname(__file__), 'data.db')}"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.secret_key = os.environ['SECRET_KEY']
 app.secret_key = 'secret'
